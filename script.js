@@ -1,3 +1,3 @@
 document.addEventListener('DOMContentLoaded', () => {
-    console.log("Thanks for visiting! The website is under construction.");
+    console.log("Welcome! This website is currently under development. Stay tuned!");
 });
