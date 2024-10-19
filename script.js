@@ -1,3 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
-    console.log("Welcome! This website is currently under development. Stay tuned!");
+    const title = document.querySelector('.profile h1');
+
+    title.addEventListener('mouseenter', () => {
+        title.style.color = '#2ecc71';
+    });
+
+    title.addEventListener('mouseleave', () => {
+        title.style.color = '#007acc';
+    });
 });
