@@ -1,31 +1,63 @@
-body {
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
     font-family: 'Arial', sans-serif;
-    background-color: #f0f0f0;
-    color: #333;
+    color: #ffffff;
+    overflow: hidden;
+}
+
+.background {
+    height: 100%;
+    background: linear-gradient(120deg, #007acc, #00d4ff, #0066ff);
+    background-size: 300% 300%;
+    animation: gradientAnimation 6s ease infinite;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0;
-    padding: 0;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 .container {
     text-align: center;
     padding: 20px;
-    background-color: #fff;
+    background: rgba(0, 0, 0, 0.5);
     border-radius: 10px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-h1 {
+.animated-text {
     font-size: 3rem;
-    color: #007acc;
-    margin-bottom: 10px;
+    color: #ffffff;
+    animation: fadeIn 3s infinite alternate;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
 }
 
 p {
     font-size: 1.2rem;
-    color: #666;
+    color: #ffffff;
     line-height: 1.5;
+}
+
+.contact-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #00d4ff;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.contact-button:hover {
+    background: #007acc;
 }
